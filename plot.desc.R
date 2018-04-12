@@ -1,7 +1,7 @@
 plot.desc <- function(x, main) {
   par(mfrow = c(2, 2))
   if(missing(main))
-    main <- deparse(substitute(x))
+    main <- substitute(x)
   plot(x, main = main)
   plot(density(x, na.rm = TRUE), main = main)
   hist(x, main = main)
