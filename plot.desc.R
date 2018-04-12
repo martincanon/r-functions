@@ -1,7 +1,7 @@
 plot.desc <- function(x, main) {
   par(mfrow = c(2, 2))
   if(missing(main))
-    main <- substitute(x)
+    main <- deparse(substitute(x))
   if(grepl("\\$", main)) {
             main <- strsplit(main, "\\$")[[1]][2]
         }
