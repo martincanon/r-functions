@@ -1,0 +1,6 @@
+mean_diff <- function(mean_fp, sd_fp, n_fp, mean_sn, sd_sn, n_sn, conf.level) {
+  MD = mean_fp - mean_sn
+  SE = qnorm((1 - conf.level)/2)*sqrt(sd_fp^2/n_fp + sd_sn^2/n_sn)
+  CI = round(MD + (c(SE, -c(SE))), 2)
+  list(c(DM = MD, IC = CI, Confianza = conf.level))     
+}
