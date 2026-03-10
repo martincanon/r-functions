@@ -82,6 +82,3 @@ grade_imprecision <- function(modelo, data,
     pack_rows("Efecto absoluto",   4, 7)  |>
     pack_rows("Imprecisión GRADE", 8, 12)
 }
-
-# Uso
-grade_imprecision(mod.colon.ustek, df_colon_ustek)
